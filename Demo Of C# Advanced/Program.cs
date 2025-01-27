@@ -225,6 +225,23 @@
             //}
 
             #endregion
+            #region Problems with Non Generic List
+            //ArrayList list = new ArrayList();
+            //list.Add(1);
+            //list.Add(2);
+            //list.Add(3);
+            //list.Add(4);
+            //list.Add(5);
+
+            //int sum01 = SumArrayList(list);
+            //Console.WriteLine(sum01); // 15
+
+            //list.Add("Hello");
+            //list.Add(new Employee());
+            //list.Add(2.7);
+            //int sum02 = SumArrayList(list);
+            //Console.WriteLine(sum02); // InvalidCastException // b3d ama 3mlt condition list[i] is int el result ===> 15
+            #endregion
         }
     }
 }
