@@ -309,6 +309,37 @@
             // Console.WriteLine(linkedList.Last());  //7
 
             #endregion
+            #region Generic Lists - Stack
+            // Generic List :: Stack [ LIFO == last in first out ]
+            // Stack<int> stack = new Stack<int>();
+            //stack.Push(42);
+            //stack.Push(43);
+            //stack.Push(66);
+            //// Peak() :: To find first elemnt
+            //int firstElemnt = stack.Peek();
+            ////Console.WriteLine(firstElemnt); // return top(last added elemnt) ::  66 
+
+
+            //// Pop() ==> remove from the top
+            //int remove = stack.Pop();
+            ////Console.WriteLine(remove);// 66
+            //foreach (var item in stack)
+            //{
+            //    Console.WriteLine(item);
+            //}/*66
+            //   43
+            //  42*/
+
+
+            // TryPeek(out int top) :: return true if top existed & false if not exist~~
+            //bool Flag = stack.TryPeek(out int top);
+            //Console.WriteLine(Flag);// true
+
+
+            // TryPop(out int top) :: return true if top existed & false if not exist~~
+            //bool Flag = stack.TryPop(out int top);
+            //Console.WriteLine(Flag);// true
+            #endregion
 
         }
     }
