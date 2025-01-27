@@ -279,7 +279,7 @@
             //List<Employee> employees01 = employees.GetRange(0, 2);
             //PrintList(employees01);
             #endregion
-            #region 06 Generic Lists - LinkedList
+            #region  Generic Lists - LinkedList
             // Linked List :: Generic
             // Linked List ==>  Node List [value - key] (next.. value.. prev)
             // Linked List In C# ==> type :: Double linked list meaning has [ prev - value - next ]
@@ -309,6 +309,7 @@
             // Console.WriteLine(linkedList.Last());  //7
 
             #endregion
+
         }
     }
 }
