@@ -242,6 +242,43 @@
             //int sum02 = SumArrayList(list);
             //Console.WriteLine(sum02); // InvalidCastException // b3d ama 3mlt condition list[i] is int el result ===> 15
             #endregion
+            #region Generic Lists
+            // Generic Lists :: List
+            // List Version Generic Of Array List
+            // List :: Like Array List Like Array But Generic  ===> Dynamic Size
+            // List<int> list = new List<int>(new int[] {1,2,3,4,5,6,7,8,9,10});
+            // list.Add("shimaa");// ERRORRRRR
+            // PrintList(list);
+
+            //int sum = SumArrayList(list);
+            //Console.WriteLine(sum); // 55
+            //list.AddRange(new List<int> { 1, 2, 3, 5, 6, 7, 8, 9 });
+            //PrintList(list);
+
+            //===========================
+            //Employee Emp01 = new Employee() { Id = 0, Name = "shimaa", Age = 24, Salary = 50000 };
+            //Employee Emp02 = new Employee() { Id = 1, Name = "ayla", Age = 20, Salary = 10000 };
+            //Employee Emp03 = new Employee() { Id = 2, Name = "mbfdr", Age = 27, Salary = 20000 };
+            //Employee Emp04 = new Employee() { Id = 3, Name = "amoi", Age = 26, Salary = 30000 };
+            //Employee Emp05 = new Employee() { Id = 4, Name = "mory", Age = 29, Salary = 40000 };
+
+            //List<Employee> employees = new List<Employee> { Emp01, Emp02, Emp03, Emp04, Emp05 };
+            //Console.WriteLine(employees[1]);
+
+            //Console.WriteLine(employees.BinarySearch(Emp05));// 4
+            //Console.WriteLine(employees.BinarySearch(Emp01,new EmployeeCompareNameGeneric()));
+
+
+            //Console.WriteLine($"Count: {list.Count} , Capacity: {list.Capacity}");// 10 ,10
+            //Console.WriteLine(list.EnsureCapacity(20));// 20
+            //Console.WriteLine($"Count: {list.Count} , Capacity: {list.Capacity}"); // 10 ,20
+
+            //List<Employee> employees1 =  employees.Slice(0,2 ); // Create a shallow copy
+            //PrintList( employees1 );
+
+            //List<Employee> employees01 = employees.GetRange(0, 2);
+            //PrintList(employees01);
+            #endregion
         }
     }
 }
