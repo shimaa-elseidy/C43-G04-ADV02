@@ -279,6 +279,36 @@
             //List<Employee> employees01 = employees.GetRange(0, 2);
             //PrintList(employees01);
             #endregion
+            #region 06 Generic Lists - LinkedList
+            // Linked List :: Generic
+            // Linked List ==>  Node List [value - key] (next.. value.. prev)
+            // Linked List In C# ==> type :: Double linked list meaning has [ prev - value - next ]
+            // single linked list [ value - next ]
+
+            //LinkedList<int> linkedList = new LinkedList<int>();
+            ////linkedList.AddFirst(1); // prev = null , next = null , value = 1
+            ////PrintLinkedList(linkedList); //  null <- 1 ->  null
+
+            ////linkedList.AddLast(1);
+            ////PrintLinkedList(linkedList);
+
+            //LinkedListNode<int> node = new LinkedListNode<int>(3);
+            //linkedList.AddLast(node);
+            ////PrintLinkedList(linkedList); //::3
+
+            //linkedList.AddFirst(1);
+            //linkedList.AddFirst(2);
+            //linkedList.AddAfter(node,7);
+
+            // LinkedListNode<int> result = linkedList.Find(1);
+            // linkedList.AddAfter(result, 7); // hy3ml add b3d el 1 ==> 7
+            //// PrintLinkedList(linkedList);
+            // Console.WriteLine(linkedList.First()); //2
+            // Console.WriteLine(linkedList.First.Value);// 2
+            // Console.WriteLine(linkedList.First.ValueRef);//2
+            // Console.WriteLine(linkedList.Last());  //7
+
+            #endregion
         }
     }
 }
