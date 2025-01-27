@@ -340,6 +340,12 @@
             //bool Flag = stack.TryPop(out int top);
             //Console.WriteLine(Flag);// true
             #endregion
+            #region  Generic Lists - Queue
+            //// Queue  :: [ FIFO == first in first out ]
+            //Queue<int> queue = new Queue<int>();
+            //  queue.Enqueue(1);// add at last of queue
+            //queue.Dequeue();// remove from first 
+            #endregion
 
         }
     }
