@@ -13,6 +13,18 @@
             // Hash Tables    :: DS of type Array Based el elemnt has [Key - Value] ==> key unique
             // Hash Tables    :: help us to deal with big amount of data and complex
             #endregion
+            #region What is collection
+            // Collections in C# in two categories[Generic - Non Generic]
+            // 1. lists
+            // 2. Hash Tables [key - value]
+            // Lists :: Generic - Non-Generic
+            // Non generic lists :: such [ array list - stack - queue ]
+            // Generic Lists     :: such [ list - linked list - stack - queue]
+
+            // Hash Tables :: Generic - Non-Generic
+            // Non generic hashtables :: such [ Hash Table ]
+            // Generic hashtables     :: such [ Dictionary - sorted dictionary - hash set +....]
+            #endregion
         }
     }
 }
