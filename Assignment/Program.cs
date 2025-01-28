@@ -72,6 +72,23 @@
             //    Console.WriteLine("No");
             //}
             #endregion
+            #region Q03
+            // 3. Given a Queue, implement a function to reverse the elements of a queue using a stack.
+            //Queue<string> queue = new Queue<string>();
+            //queue.Enqueue("A");
+            //queue.Enqueue("B");
+            //queue.Enqueue("C");
+            //ReverseQueue(queue);
+
+
+            //Console.Write("Items After Reverse:");
+            //Console.WriteLine();
+            //foreach (var item in queue)
+            //{
+            //    Console.WriteLine(item);
+            //}
+            #endregion
+
         }
         static int CountGreaterThan(int[] array, int X)
         {
@@ -100,6 +117,20 @@
                 end--;
             }
             return true; 
+        }
+        static void ReverseQueue(Queue<string> queue)
+        {
+            Stack<string> stack = new Stack<string>();
+ 
+            while (queue.Count > 0)
+            {
+                stack.Push(queue.Dequeue());
+            }
+
+            while (stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
         }
     }
 }
