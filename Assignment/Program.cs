@@ -42,7 +42,6 @@
             //}
 
             #endregion
-
             #region Q02
             /*2. Given a number N and an array of N numbers. Determine if it's palindrome or not.
                  Ex:
@@ -88,6 +87,30 @@
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Q04
+            /*
+             4. Given a Stack, implement a function to check if a string of parentheses is balanced using a stack.
+                   Ex:
+                   Input:
+                   [()]{}
+                   Output:
+                   Balanced
+             */
+
+
+            //string input01 = "[()]{ }{ }";  // balanced
+            //string input02 = "[()]{ }}";
+            //bool isBalanced = CheckBalancedParentheses(input01);
+
+            //if (isBalanced)
+            //{
+            //    Console.WriteLine("Balanced");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Not Balanced");
+            //}
+            #endregion
 
         }
         static int CountGreaterThan(int[] array, int X)
@@ -131,6 +154,32 @@
             {
                 queue.Enqueue(stack.Pop());
             }
+        }
+        static bool CheckBalancedParentheses(string str)
+        {
+            Stack<char> stack = new Stack<char>();
+
+            foreach (char ch in str)
+            {
+                if (ch == '(' || ch == '{' || ch == '[')
+                {
+                    stack.Push(ch);
+                } 
+                else if (ch == ')' || ch == '}' || ch == ']')
+                {               
+                    if (stack.Count == 0 || !IsMatchingPair(stack.Pop(), ch))
+                    {
+                        return false;  
+                    }
+                }
+            }
+            return stack.Count == 0;
+        }
+        static bool IsMatchingPair(char open, char close)
+        {
+            return (open == '(' && close == ')') ||
+                   (open == '{' && close == '}') ||
+                   (open == '[' && close == ']');
         }
     }
 }
