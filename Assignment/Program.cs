@@ -113,14 +113,25 @@
             #endregion
             #region Q05
             // 5. Given an array, implement a function to remove duplicate elements from an array.
-                //int[] array = { 1, 2, 2, 3, 4, 4, 5, 5, 6 }; 
-                //int[] result = RemoveDuplicates(array);
+            //int[] array = { 1, 2, 2, 3, 4, 4, 5, 5, 6 }; 
+            //int[] result = RemoveDuplicates(array);
 
-                //Console.WriteLine("An Array After Remove Duplicate Items: ");
-                //foreach (var item in result)
-                //{
-                //    Console.Write(item + " ");
-                //}
+            //Console.WriteLine("An Array After Remove Duplicate Items: ");
+            //foreach (var item in result)
+            //{
+            //    Console.Write(item + " ");
+            //}
+            #endregion
+            #region Q06
+            // 6. Given an array list , implement a function to remove all odd numbers from it.
+            //List<int> list = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            //RemoveOddNumbers(list);
+            //Console.WriteLine("An Array After Removed Odd Numbers: ");
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine($"{item}");
+            //}
+
             #endregion
 
         }
@@ -215,6 +226,16 @@
             int[] resultArray = new int[index];
             Array.Copy(tempArray, resultArray, index);
             return resultArray; 
+        }
+        static void RemoveOddNumbers(List<int> arr)
+        {
+            for (int i = arr.Count - 1; i >= 0; i--)
+            {
+                if (arr[i] %2 == 1)
+                {
+                    arr.RemoveAt(i);// Remove at to remove specific item in specific index
+                }
+            }
         }
     }
 }
