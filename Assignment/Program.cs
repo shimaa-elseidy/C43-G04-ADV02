@@ -229,8 +229,8 @@ namespace Assignment
             #region Q10
             /*10. Given an ArrayList of integers and a target sum, find if there is a 
                   contiguous sub list that sums up to the target.*/
-            
-            
+
+
             //Console.WriteLine("Enter the target sum:");
             //int target = int.Parse(Console.ReadLine());
 
@@ -255,6 +255,27 @@ namespace Assignment
             //{
             //    Console.WriteLine("No sublist found.");
             //}
+            #endregion
+            #region Q11
+            // 11. Given a queue reverse first K elements of a queue, keeping the remaining elements in the same order 
+            //Queue<int> queue = new Queue<int>();
+            //queue.Enqueue(1);
+            //queue.Enqueue(2);
+            //queue.Enqueue(3);
+            //queue.Enqueue(4);
+            //queue.Enqueue(5);
+
+            //Console.WriteLine("Queue contents:");
+            //foreach (var item in queue)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            //Console.WriteLine("Enter first K elements of a queue: ");
+            //int k = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Original Queue: " + string.Join(", ", queue));
+            //Queue<int> result = ReverseFirstKElements(queue, k);
+            //Console.WriteLine("Queue after reversing first K elements: " + string.Join(", ", result));
             #endregion
         }
         static int CountGreaterThan(int[] array, int X)
@@ -429,6 +450,33 @@ namespace Assignment
             }
             return new List<int>();
         }
+        static Queue<int> ReverseFirstKElements(Queue<int> queue, int k)
+        {
+            if (k <= 0 || k > queue.Count)
+            {
+                throw new ArgumentException("Invalid value of K.");
+            }
 
+            Stack<int> stack = new Stack<int>();
+
+            for (int i = 0; i < k; i++)
+            {
+                stack.Push(queue.Dequeue());
+            }
+
+
+            while (stack.Count > 0)
+            {
+                queue.Enqueue(stack.Pop());
+            }
+
+            int remaining = queue.Count - k;
+            for (int i = 0; i < remaining; i++)
+            {
+                queue.Enqueue(queue.Dequeue());
+            }
+
+            return queue;
+        }
     }
 }
