@@ -111,6 +111,17 @@
             //    Console.WriteLine("Not Balanced");
             //}
             #endregion
+            #region Q05
+            // 5. Given an array, implement a function to remove duplicate elements from an array.
+                //int[] array = { 1, 2, 2, 3, 4, 4, 5, 5, 6 }; 
+                //int[] result = RemoveDuplicates(array);
+
+                //Console.WriteLine("An Array After Remove Duplicate Items: ");
+                //foreach (var item in result)
+                //{
+                //    Console.Write(item + " ");
+                //}
+            #endregion
 
         }
         static int CountGreaterThan(int[] array, int X)
@@ -134,17 +145,17 @@
             {
                 if (arr[start] != arr[end])
                 {
-                    return false;  
+                    return false;
                 }
                 start++;
                 end--;
             }
-            return true; 
+            return true;
         }
         static void ReverseQueue(Queue<string> queue)
         {
             Stack<string> stack = new Stack<string>();
- 
+
             while (queue.Count > 0)
             {
                 stack.Push(queue.Dequeue());
@@ -164,12 +175,12 @@
                 if (ch == '(' || ch == '{' || ch == '[')
                 {
                     stack.Push(ch);
-                } 
+                }
                 else if (ch == ')' || ch == '}' || ch == ']')
-                {               
+                {
                     if (stack.Count == 0 || !IsMatchingPair(stack.Pop(), ch))
                     {
-                        return false;  
+                        return false;
                     }
                 }
             }
@@ -180,6 +191,30 @@
             return (open == '(' && close == ')') ||
                    (open == '{' && close == '}') ||
                    (open == '[' && close == ']');
+        }
+        static int[] RemoveDuplicates(int[] array)
+        {
+            if (array.Length == 0) return array;  
+            Array.Sort(array);
+
+
+            int[] tempArray = new int[array.Length];
+            int index = 0;
+
+
+            tempArray[index++] = array[0];
+
+      
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] != array[i - 1])
+                {
+                    tempArray[index++] = array[i];  
+                }
+            }             
+            int[] resultArray = new int[index];
+            Array.Copy(tempArray, resultArray, index);
+            return resultArray; 
         }
     }
 }
