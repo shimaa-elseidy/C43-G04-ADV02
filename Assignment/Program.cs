@@ -152,6 +152,36 @@ namespace Assignment
             //    Console.WriteLine(item);
             //}
             #endregion
+            #region Q08
+            /*
+             8. Create a function that pushes a series of integers onto a stack. 
+                Then, search for a target integer in the stack. If the target is found, 
+                print a message indicating that the target was found how many elements 
+                were checked before finding the target (“Target was found successfully and the count = 5”). 
+                If the target is not found, print a message indicating that the target was not found(“Target was not found”).
+                Note : take the target as input from the user.
+             */
+
+
+            //Stack<int> stack = new Stack<int>();
+            //stack.Push(1);
+            //stack.Push(2);
+            //stack.Push(3);
+            //stack.Push(4);
+            //stack.Push(5);
+
+           
+            //Console.WriteLine("==========================");
+            //foreach (var item in stack)
+            //{
+            //    Console.WriteLine($"{item} ");
+            //}
+            //Console.WriteLine("Enter The Target Input : ");
+            //int input = int.Parse(Console.ReadLine());
+            //Console.WriteLine("==========================");
+            //GetTarget(stack, input);
+
+            #endregion
 
         }
         static int CountGreaterThan(int[] array, int X)
@@ -224,7 +254,7 @@ namespace Assignment
         }
         static int[] RemoveDuplicates(int[] array)
         {
-            if (array.Length == 0) return array;  
+            if (array.Length == 0) return array;
             Array.Sort(array);
 
 
@@ -234,27 +264,55 @@ namespace Assignment
 
             tempArray[index++] = array[0];
 
-      
+
             for (int i = 1; i < array.Length; i++)
             {
                 if (array[i] != array[i - 1])
                 {
-                    tempArray[index++] = array[i];  
+                    tempArray[index++] = array[i];
                 }
-            }             
+            }
             int[] resultArray = new int[index];
             Array.Copy(tempArray, resultArray, index);
-            return resultArray; 
+            return resultArray;
         }
         static void RemoveOddNumbers(List<int> arr)
         {
             for (int i = arr.Count - 1; i >= 0; i--)
             {
-                if (arr[i] %2 == 1)
+                if (arr[i] % 2 == 1)
                 {
                     arr.RemoveAt(i);// Remove at to remove specific item in specific index
                 }
             }
         }
+        static void GetTarget(Stack<int> stack, int target)
+        {
+            if (stack != null & stack.Count > 0)
+            {
+                int count = 0;
+                bool found = false;
+                foreach (var item in stack)
+                {
+                    count++;
+                    if (item.Equals(target))
+                    {
+                        found = true;
+                        Console.WriteLine($"Target was found successfully and the count = {count}");
+                        break;
+                    }
+                }
+
+                if (!found)
+                {
+                    Console.WriteLine("Target was not found");
+                }
+            }
+            else
+            {
+                Console.WriteLine("The Stack Is Empty Or Null ");
+            }
+        }
+
     }
 }
