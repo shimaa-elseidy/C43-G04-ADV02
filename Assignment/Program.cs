@@ -1,4 +1,6 @@
-﻿namespace Assignment
+﻿using System;
+
+namespace Assignment
 {
     internal class Program
     {
@@ -132,6 +134,23 @@
             //    Console.WriteLine($"{item}");
             //}
 
+            #endregion
+            #region Q07
+            /*7. Implement a queue that can hold different data types. 
+                 And insert the following data:
+                 queue.Enqueue(1)
+                 queue.Enqueue(“Apple”)
+                 queue.Enqueue(5.28)*/
+
+            //Queue<object> queue = new Queue<object>();
+            //queue.Enqueue(1);
+            //queue.Enqueue("Apple");
+            //queue.Enqueue(5.28);
+            //Console.WriteLine("Queue Have :");
+            //foreach (var item in queue)
+            //{
+            //    Console.WriteLine(item);
+            //}
             #endregion
 
         }
