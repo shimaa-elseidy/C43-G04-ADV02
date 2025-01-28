@@ -185,8 +185,8 @@ namespace Assignment
             #region Q09
             /* 9. Given two arrays, find their intersection.
                   Each element in the result should appear as many times as it shows in both arrays*/
-       
-            
+
+
             //Console.WriteLine("Enter Size Of Array01 : ");
             //int Siza01 = int.Parse(Console.ReadLine());
             //Console.WriteLine("Enter Size Of Array02 : ");
@@ -194,7 +194,7 @@ namespace Assignment
 
             //List<int> list01 = new List<int>(Siza01);
             //List<int> list02 = new List<int>(Siza02);
-           
+
             //Console.WriteLine("Enter Values Of Array01 (sepaareted by space )");
             //string input01 = Console.ReadLine();
             //string[] val01 = input01.Split(" ");
@@ -225,6 +225,36 @@ namespace Assignment
             //Console.WriteLine("::::::::::::::::::::::::::::::");
             //Console.WriteLine();
             //FindInterSection(list01,list02);
+            #endregion
+            #region Q10
+            /*10. Given an ArrayList of integers and a target sum, find if there is a 
+                  contiguous sub list that sums up to the target.*/
+            
+            
+            //Console.WriteLine("Enter the target sum:");
+            //int target = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Enter the elements of the ArrayList separated by space:");
+            //string input = Console.ReadLine();
+            //string[] values = input.Split(" ");
+
+            //List<int> numbers = new List<int>();
+            //foreach (string value in values)
+            //{
+            //    numbers.Add(int.Parse(value));
+            //}
+
+            //List<int> result = FindContiguousSublistThatSumsToTarget(numbers, target);
+
+            //if (result.Count > 0)
+            //{
+            //    Console.WriteLine("Found sublist:");
+            //    Console.WriteLine(string.Join(" ", result));
+            //}
+            //else
+            //{
+            //    Console.WriteLine("No sublist found.");
+            //}
             #endregion
         }
         static int CountGreaterThan(int[] array, int X)
@@ -356,7 +386,7 @@ namespace Assignment
                 Console.WriteLine("The Stack Is Empty Or Null ");
             }
         }
-        static void FindInterSection(List<int> list01 , List<int> list02)
+        static void FindInterSection(List<int> list01, List<int> list02)
         {
             if (list01 != null & list02 != null & list01.Count > 0 & list02.Count > 0)
             {
@@ -375,6 +405,29 @@ namespace Assignment
             {
                 Console.WriteLine("One or both lists are empty or null.");
             }
+        }
+        static List<int> FindContiguousSublistThatSumsToTarget(List<int> numbers, int target)
+        {
+            for (int i = 0; i < numbers.Count; i++) // start
+            {
+                int sum = 0;
+                List<int> SubList = new List<int>();
+                for (int j = 0; j < numbers.Count; j++) // end
+                {
+                    sum += numbers[j];
+                    SubList.Add(numbers[j]);
+                    if (sum.Equals(target))
+                    {
+                        return SubList;
+                    }
+                    else if (sum > target)
+                    {
+                        break;
+                    }
+
+                }
+            }
+            return new List<int>();
         }
 
     }
