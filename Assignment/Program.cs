@@ -170,7 +170,7 @@ namespace Assignment
             //stack.Push(4);
             //stack.Push(5);
 
-           
+
             //Console.WriteLine("==========================");
             //foreach (var item in stack)
             //{
@@ -182,7 +182,50 @@ namespace Assignment
             //GetTarget(stack, input);
 
             #endregion
+            #region Q09
+            /* 9. Given two arrays, find their intersection.
+                  Each element in the result should appear as many times as it shows in both arrays*/
+       
+            
+            //Console.WriteLine("Enter Size Of Array01 : ");
+            //int Siza01 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter Size Of Array02 : ");
+            //int Siza02 = int.Parse(Console.ReadLine());
 
+            //List<int> list01 = new List<int>(Siza01);
+            //List<int> list02 = new List<int>(Siza02);
+           
+            //Console.WriteLine("Enter Values Of Array01 (sepaareted by space )");
+            //string input01 = Console.ReadLine();
+            //string[] val01 = input01.Split(" ");
+
+            //foreach (var value in val01)
+            //{
+            //    list01.Add(int.Parse(value));
+            //}
+            //Console.WriteLine("Enter Values Of Array02 (sepaareted by space )");
+            //string input02 = Console.ReadLine();
+            //string[] val02 = input02.Split(" ");
+            //foreach (var value in val02)
+            //{
+            //    list02.Add(int.Parse(value));
+            //}
+            //Console.WriteLine("\nContents of Array01:");
+            //foreach (var item in list01)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+
+            //Console.WriteLine("\nContents of Array02:");
+            //foreach (var item in list02)
+            //{
+            //    Console.Write($"{item} ");
+            //}
+            //Console.WriteLine();
+            //Console.WriteLine("::::::::::::::::::::::::::::::");
+            //Console.WriteLine();
+            //FindInterSection(list01,list02);
+            #endregion
         }
         static int CountGreaterThan(int[] array, int X)
         {
@@ -311,6 +354,26 @@ namespace Assignment
             else
             {
                 Console.WriteLine("The Stack Is Empty Or Null ");
+            }
+        }
+        static void FindInterSection(List<int> list01 , List<int> list02)
+        {
+            if (list01 != null & list02 != null & list01.Count > 0 & list02.Count > 0)
+            {
+                for (int i = 0; i < list01.Count; i++)
+                {
+                    for (int j = 0; j < list02.Count; j++)
+                    {
+                        if (list01[i].Equals(list02[j]))
+                        {
+                            Console.WriteLine(list01[i]);
+                        }
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("One or both lists are empty or null.");
             }
         }
 
